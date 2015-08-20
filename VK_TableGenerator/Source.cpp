@@ -103,9 +103,9 @@ void emitSymbols(ostream& f)
 	}
 
 	// Alphabet / face buttons:
-	for (char a = 'A'; a <= 'Z'; a++)
+	for (unsigned i = 0; i < 26; i++)
 	{
-		f << "{\"VK_"<<a<<"\", 0x" << uppercase << (0x41+a) << "}," << endl;
+		f << "{\"VK_"<<(char)('A'+i)<<"\", 0x" << uppercase << (0x41+i) << "}," << endl;
 	}
 
 	f << dec;
